@@ -1,0 +1,202 @@
+<div class="container">
+    <header>
+        <div class="head1">
+                <button>
+                    <h1>
+                     <img src="../assets/image/images.jpg" style="height: 28px;" >
+                    </h1>
+                    <span>
+                        &#11167;
+                    </span>
+                </button>
+            <h1 style="color: #414040; cursor: default;">
+                |
+            </h1>
+            <button id="store">
+                STORE
+            </button>
+            <button id="supp">
+                Support
+            </button> 
+            <button id="distr">
+                Distribute
+            </button> 
+        </div>
+        <div class="head2">
+            <div>
+                <button id="brows">
+                    &#9775;
+                </button>
+            </div>
+            <div>
+                <button id="login-btn">
+                    &#9731;	
+                </button>
+            </div>
+            <div>
+                <button id="down-btn" >
+                    Download 
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="upper-mid">
+            <div>
+                <input type="text" placeholder="&#8981; Search Store">
+                <a>
+                    Discover
+                </a>
+                <a>
+                    Browse
+                </a>
+                <a>
+                    News
+                </a>    
+            </div>
+        </div>
+        <div class="middle-mid">
+            <img [src]="imgs[currentIndex]"  style="width: 940px; height: 530px; background-color: white; cursor: pointer;">
+            <div class="middle-mid2">
+                <ul>
+                    <li  *ngFor="let img of imgs">
+                        <img [src]="img" alt="IMGS">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="top-rel">
+            <div class="top-rel-upper">
+                <div class="top-rel-ipper-left">
+                    <h2 id="tp-re">
+                        Top New Releases
+                    </h2>
+                    <button id="arrow1">
+                        &#10095;   
+                    </button>    
+                </div>
+                <div class="tpre-btns">
+                    <button (click)="prevSlide()">
+                        &#10094;
+                    </button>
+                    <button (click)="nextSlide()">
+                        &#10095;
+                    </button>
+                </div>
+            </div>
+            <div class="top-rel-bot">
+                <div class="li-img" *ngFor="let image of images">
+                    <ul [ngStyle]="{'transform': 'translateX(-' + currentSlideIndex * 100 + '%)'}"
+                    style="display: flex; transition: transform 0.5s ease-in-out;">
+                        <li>
+                            <img [src]="image" alt="Image">            
+                            <h6>
+                                BASE GAME
+                            </h6>
+                            <h3>
+                                Crosshair X
+                            </h3>
+                            <h4>
+                                $3.59 
+                            </h4>
+                        </li>    
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="ft-disc">
+            <div class="ft-disc-upper">
+                <div class="ft-disc-ipper-left">
+                    <h2 id="ft">
+                       Featured Discounts
+                    </h2>
+                    <button id="arrow2">
+                        &#10095;   
+                    </button>    
+                </div>
+                <div class="ftdisc-btns">
+                    <button (click)="preVslide()">
+                        &#10094;
+                    </button>
+                    <button (click)="nexTslide()">
+                        &#10095;
+                    </button>
+                </div>
+            </div>
+            <div class="ft-disc-bot">
+                <div *ngFor="let img of images">
+                    <ul [ngStyle]="{'transform': 'translateX(-' + currenTslideIndex * 100 + '%)'}"
+                    style="display: flex; transition: transform 0.5s ease-in-out;">
+                        <li style="list-style-type: none; width: 100%;">
+                            <img [src]="img" alt="Images">
+                            <h6>
+                                BASE GAME
+                            </h6>
+                            <h3>
+                                Hades II
+                            </h3>
+                            <div>
+                                <h5>
+                                    - 40 %  
+                                </h5>
+                                <h4 id="disc">
+                                    $14.49
+                                </h4>
+                                <h4>
+                                    $8.69
+                                </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="free-games">
+            <div class="in-frgm">
+                <div class="frgm-top"> 
+                    <h2 style="display: flex; align-items: center;">
+                        <span style="font-size: 50px; margin-right: 10px;">
+                            &#x2612;
+                        </span>
+                        Free Games
+                    </h2>
+                    <div>
+                        <button id="view-more">
+                            VIEW MORE
+                        </button>    
+                    </div>
+                </div>
+                <div class="frgm-bot">
+                    <div class="frgm-bot1">
+                        <img src="../assets/image/joistiki.jpg">
+                        <h3 style="background-color: #0078f2;">
+                            FREE NOW
+                        </h3>
+                        <div style="margin-top: 20px;">
+                            <h4>
+                                The Falconeer: Standard Edition
+                            </h4>
+                            <h5>
+                                Free Now - Jul 11 at 07:00 PM
+                            </h5>
+                        </div>
+                    </div>
+                    <div  class="frgm-bot2">
+                        <img src="../assets/image/joistiki.jpg" style=" margin-left: 15px;">
+                        <h3 style="margin-left: 15px; background-color:black;">
+                            COMMING SOON
+                        </h3>
+                        <div style="margin-left: 15px; margin-top: 20px;">
+                            <h4>
+                                Floppy Knights
+                            </h4>
+                            <h5>
+                                Free Jul 11 - Jul 18
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
